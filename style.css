@@ -1,0 +1,149 @@
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #06171E ;
+    color: #ffffff;
+    margin: 0;
+}
+
+button{
+    
+    border: none;
+    height: 48px;
+    padding: 10px 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.header-of-page{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #09212A ;
+    padding-left: 40px;
+    position: fixed;
+}
+
+.gallery-section{
+    padding: 100px 80px;
+}
+
+.gallery-section h1{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    font-size: 56px;
+    font-weight: 800;
+
+}
+    
+
+#photo-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.photo-item img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.footer-of-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 128px;
+    width: 100%;
+    background-color: #09212A ;
+    bottom: 0;
+    position: fixed;
+    border-radius: 70% 70% 0 0 / 60% 60% 90% 0;
+    
+}
+
+.photo-dialog{
+    height: 600px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.dialog-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 10px 20px;
+}
+
+.x-button{
+    border-radius: 100%;
+    border: none;
+    font-size: 20px;
+    font-weight: bold
+}
+.dialog-img{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.arrow{
+    height: 30px;
+    width: 30px;
+}
+
+.numbers{
+    font-size: 24px;
+    align-self: center;
+    padding: 0 32px;
+}
+
+.dialog-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 700px) {
+    .gallery-section h1{
+        font-size: 32px;
+        text-align: center;
+        
+    }
+
+    .photo-dialog{
+        height: 500px;
+        width: 500px;
+    }
+
+    h2{
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .x-button{
+        font-size: 16px;
+    }
+
+    .dialog-img{
+        height: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-section h1{
+        font-size: 24px;
+    }
+
+    .gallery-section{
+        padding: 100px 20px;
+    }
+}
