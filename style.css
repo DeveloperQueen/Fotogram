@@ -3,7 +3,12 @@ body{
     font-family: Arial, sans-serif;
     background-color: #06171E ;
     color: #ffffff;
-    margin: 0;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    max-width: 1440px;
+    overflow: auto;
 }
 
 button{
@@ -15,6 +20,9 @@ button{
     cursor: pointer;
 }
 
+main{
+    flex: 1; 
+}
 .header-of-page{
     display: flex;
     align-items: center;
@@ -22,7 +30,6 @@ button{
     width: 100%;
     background-color: #09212A ;
     padding-left: 40px;
-    position: fixed;
 }
 
 .gallery-section{
@@ -45,6 +52,7 @@ button{
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 100px;
 }
 
 .photo-item:hover{
@@ -68,7 +76,6 @@ button{
     width: 100%;
     background-color: #09212A ;
     bottom: 0;
-    position: fixed;
     border-radius: 70% 70% 0 0 / 60% 60% 90% 0;
     
 }

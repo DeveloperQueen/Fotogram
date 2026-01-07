@@ -1,4 +1,4 @@
-let pics = [
+const pics = [
   "pic_1.jpg",
   "pic_2.jpg",
   "pic_3.jpg",
@@ -41,11 +41,14 @@ function openDialog(index) {
   titleRef.innerText = `Mein Bild ${pics[currentIndex]}`;
   dialogImg.src = `./img/${pics[currentIndex]}`;
   dialogRef.showModal();
+
+  document.body.style.overflow = "hidden";
 }
 
 function closeDialog() {
   const dialogRef = document.getElementById("photoDialog");
   dialogRef.close();
+  document.body.style.overflow = "auto";
 }
 
 function showPreviousPhoto() {
