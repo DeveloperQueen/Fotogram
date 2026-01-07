@@ -47,6 +47,11 @@ button{
     margin-top: 30px;
 }
 
+.photo-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 .photo-item img{
     height: 150px;
     width: 150px;
