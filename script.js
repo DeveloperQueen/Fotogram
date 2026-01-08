@@ -51,6 +51,16 @@ function closeDialog() {
   document.body.style.overflow = "auto";
 }
 
+function closeDialogOnBackdrop(event) {
+  const dialog = document.getElementById("photoDialog");
+
+  // Wenn direkt auf den Dialog (Backdrop) geklickt wurde
+  if (event.target === dialog) {
+    dialog.close();
+  }
+}
+
+
 function showPreviousPhoto() {
   currentIndex--;
   if (currentIndex < 0) currentIndex = pics.length - 1;

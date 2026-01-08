@@ -12,7 +12,9 @@
 
 <body onload="init()">
     <header class="header-of-page">
+        <div class="logo-container">
         <img src="./img/Logo.png" alt="Logo Fotogram">
+        </div>
     </header>
 
     <main>
@@ -21,7 +23,7 @@
             <div id="photo-gallery"></div>
         </section>
 
-        <dialog class="photo-dialog" id="photoDialog">
+        <dialog class="photo-dialog" id="photoDialog" onclick="closeDialogOnBackdrop(event)" >
             <header class="dialog-header">
                 <h2 id="dialog-title">Mein Bild</h2>
                 <button class="x-button" id="close-dialog" onclick="closeDialog()">X</button>
