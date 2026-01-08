@@ -15,6 +15,8 @@ const pics = [
   "pic_14.jpg",
 ];
 
+let currentIndex = 0;
+
 function init() {
   loadGallery();
 }
@@ -27,7 +29,7 @@ function loadGallery() {
   }
 }
 
-let currentIndex = 0;
+
 
 function openDialog(index) {
   currentIndex = index;
@@ -54,10 +56,14 @@ function closeDialog() {
 function closeDialogOnBackdrop(event) {
   const dialog = document.getElementById("photoDialog");
 
-  // Wenn direkt auf den Dialog (Backdrop) geklickt wurde
   if (event.target === dialog) {
     dialog.close();
   }
+}
+
+function setFocusToDialogTitle() {
+  const titleRef = document.getElementById("headline");
+  titleRef.focus();
 }
 
 
@@ -80,7 +86,7 @@ function showNextPhoto() {
 
 function galleryClickHtml(index) {
   return `
-            <a onclick="openDialog(${index})">
+            <a onclick="openDialog(${index})" tabindex="0">
             <div class="photo-item">
                 <img src="./img/${pics[index]}" alt="Photo ${index + 1}">
             </div>
