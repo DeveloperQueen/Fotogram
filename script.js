@@ -29,8 +29,6 @@ function loadGallery() {
   }
 }
 
-
-
 function openDialog(index) {
   currentIndex = index;
 
@@ -66,30 +64,42 @@ function setFocusToDialogTitle() {
   titleRef.focus();
 }
 
+function handleKeyOpen(event, index) {
+  if (event.key === "Enter") {
+    openDialog(index);
+  }
+}
 
 function showPreviousPhoto() {
   currentIndex--;
   if (currentIndex < 0) currentIndex = pics.length - 1;
   document.getElementById("dialogImages").src = `./img/${pics[currentIndex]}`;
-  document.getElementById("photo-num").innerText = `${currentIndex + 1}/${pics.length}`;
-  document.getElementById("dialog-title").innerText = `Mein Bild ${pics[currentIndex]}`;
+  document.getElementById("photo-num").innerText = `${currentIndex + 1}/${
+    pics.length
+  }`;
+  document.getElementById(
+    "dialog-title"
+  ).innerText = `Mein Bild ${pics[currentIndex]}`;
 }
 
 function showNextPhoto() {
   currentIndex++;
   if (currentIndex >= pics.length) currentIndex = 0;
   document.getElementById("dialogImages").src = `./img/${pics[currentIndex]}`;
-  document.getElementById("photo-num").innerText = `${currentIndex + 1}/${pics.length}`;
-  document.getElementById("dialog-title").innerText = `Mein Bild ${pics[currentIndex]}`;
+  document.getElementById("photo-num").innerText = `${currentIndex + 1}/${
+    pics.length
+  }`;
+  document.getElementById(
+    "dialog-title"
+  ).innerText = `Mein Bild ${pics[currentIndex]}`;
 }
-
 
 function galleryClickHtml(index) {
   return `
-            <a onclick="openDialog(${index})" tabindex="0">
-            <div class="photo-item">
-                <img src="./img/${pics[index]}" alt="Photo ${index + 1}">
-            </div>
-            </a>
-        `;
-}
+    <a href="#" onclick="openDialog(${index})" tabindex="0">
+      <div class="photo-item">
+        <img src="./img/${pics[index]}" alt="Photo ${index + 1}">
+      </div>
+    </a>
+ `;
+} 

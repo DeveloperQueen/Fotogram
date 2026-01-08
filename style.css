@@ -29,6 +29,9 @@ main{
     height: 80px;
     width: 100%;
     background-color: #09212A ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-container{
